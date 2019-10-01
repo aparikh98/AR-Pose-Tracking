@@ -1,0 +1,74 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+cv2	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^import cv2$/;"	namespace	line:1
+np	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^import numpy as np$/;"	namespace	line:2
+calib	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^import CalibrationHelpers as calib$/;"	namespace	line:3
+glob	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^import glob$/;"	namespace	line:4
+o3d	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^import open3d as o3d$/;"	namespace	line:5
+ProjectPoints	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^def ProjectPoints(points3d, new_intrinsics, R, T):$/;"	function	line:7
+renderCube	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^def renderCube(img_in, new_intrinsics, R, T):$/;"	function	line:17
+ComputePoseFromHomography	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^def ComputePoseFromHomography(new_intrinsics, referencePoints, imagePoints):$/;"	function	line:52
+FilterByEpipolarConstraint	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^def FilterByEpipolarConstraint(intrinsics, matches, points1, points2, Rx1, Tx1, threshold = 0.01):$/;"	function	line:80
+PointCloudHelper	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^def PointCloudHelper(intrinsics, matches, points1, points2, Rx1, Tx1, mask):$/;"	function	line:103
+directory	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^directory = 'images'$/;"	variable	line:152
+images	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^images = glob.glob(directory+'\/*.JPG')$/;"	variable	line:153
+reference	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^reference = cv2.imread('ARTrackerImage.jpg',0)$/;"	variable	line:156
+RES	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^RES = 480$/;"	variable	line:157
+reference	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^reference = cv2.resize(reference,(RES,RES))$/;"	variable	line:158
+feature_detector	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^feature_detector = cv2.BRISK_create(octaves=5)$/;"	variable	line:159
+keypoint_visualization	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^keypoint_visualization = cv2.drawKeypoints($/;"	variable	line:162
+flags	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^        flags = cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)$/;"	variable	line:164
+matcher	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^matcher = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)$/;"	variable	line:167
+fname	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^fname = images[0]$/;"	variable	line:172
+img	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^img = cv2.imread(fname)$/;"	variable	line:174
+img	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^img = cv2.resize(img, None,fx=0.25,fy=0.25)$/;"	variable	line:175
+current_frame	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^                              new_intrinsics)$/;"	variable	line:177
+current_frame	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^current_frame = current_frame[y:y+h, x:x+w]$/;"	variable	line:179
+feature_track	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^feature_track = {}$/;"	variable	line:182
+new_img	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^    new_img = cv2.imread(fname)$/;"	variable	line:184
+new_img	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^    new_img = cv2.resize(new_img, None,fx=0.25,fy=0.25)$/;"	variable	line:185
+new_frame	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^                                  new_intrinsics)$/;"	variable	line:187
+new_frame	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^    new_frame = new_frame[y:y+h, x:x+w]$/;"	variable	line:189
+matches	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^    matches = matcher.match(current_descriptors, new_descriptors)$/;"	variable	line:191
+filtered_keypoints	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^filtered_keypoints = []$/;"	variable	line:197
+filtered_descriptors	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^filtered_descriptors = []$/;"	variable	line:198
+filtered_descriptors	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^filtered_descriptors = np.asarray(filtered_descriptors)$/;"	variable	line:203
+filtered_keypoints	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^filtered_keypoints = np.asarray(filtered_keypoints)$/;"	variable	line:204
+matches	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^matches = matcher.match(reference_descriptors, filtered_descriptors)$/;"	variable	line:206
+referencePoints	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^                              for m in matches])$/;"	variable	line:208
+SCALE	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^SCALE = 0.1$/;"	variable	line:209
+referencePoints	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^referencePoints = SCALE*referencePoints\/RES$/;"	variable	line:210
+imagePoints	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^                              for m in matches])$/;"	variable	line:212
+R1r	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^R1r = R$/;"	variable	line:216
+T1r	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^T1r = T$/;"	variable	line:217
+image1	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^image1 = current_frame$/;"	variable	line:218
+image1_keypoints	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^image1_keypoints = filtered_keypoints$/;"	variable	line:219
+image1_descriptors	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^image1_descriptors = filtered_descriptors$/;"	variable	line:220
+Rx1	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^Rx1 = R$/;"	variable	line:221
+Tx1	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^Tx1 = T$/;"	variable	line:222
+match_visualization	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^match_visualization = cv2.drawMatches(reference, reference_keypoints,$/;"	variable	line:223
+flags	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^                                    flags= cv2.DRAW_MATCHES_FLAGS_NOT_DRAW_SINGLE_POINTS)$/;"	variable	line:226
+k	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^k = cv2.waitKey(1)$/;"	variable	line:229
+img	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^    img = cv2.imread(fname)$/;"	variable	line:234
+img	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^    img = cv2.resize(img, None,fx=0.25,fy=0.25)$/;"	variable	line:235
+current_frame	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^                                  new_intrinsics)$/;"	variable	line:237
+current_frame	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^    current_frame = current_frame[y:y+h, x:x+w]$/;"	variable	line:239
+matches	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^        matches = matcher.match(reference_descriptors, current_descriptors)$/;"	variable	line:244
+referencePoints	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^                                      for m in matches])$/;"	variable	line:246
+SCALE	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^        SCALE = 0.1$/;"	variable	line:247
+referencePoints	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^        referencePoints = SCALE*referencePoints\/RES$/;"	variable	line:248
+imagePoints	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^                                      for m in matches])$/;"	variable	line:250
+render_frame	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^            render_frame = renderCube(current_frame,new_intrinsics,R,T)$/;"	variable	line:254
+Rx1	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^            Rx1 = np.matmul(R, R1r.T)$/;"	variable	line:255
+Tx1	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^            Tx1 = T - np.matmul(np.matmul(R, R1r.T), T1r)$/;"	variable	line:256
+matches	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^            matches = matcher.match(image1_descriptors, current_descriptors)$/;"	variable	line:257
+inlier_mask	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^            inlier_mask= FilterByEpipolarConstraint(new_intrinsics, matches, image1_keypoints, current_keypoints, Rx1, Tx1,$/;"	variable	line:258
+threshold	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^                                           threshold = 0.003)$/;"	variable	line:259
+match_visualization	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^            match_visualization = cv2.drawMatches($/;"	variable	line:261
+matchesMask	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^                matchesMask =inlier_mask, #this applies your inlier filter$/;"	variable	line:265
+flags	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^                flags=cv2.DRAW_MATCHES_FLAGS_NOT_DRAW_SINGLE_POINTS)$/;"	variable	line:266
+k	/Users/aakash/Documents/CS294-137/HW3/part3/ARImagePoseTracker.py	/^            k = cv2.waitKey(1)$/;"	variable	line:269
